@@ -1,0 +1,6 @@
+cd /c/Users/MCC19171860/Documents/PA-Springboot
+
+git pull 
+git add . 
+git commit -m "commit message"
+git push
