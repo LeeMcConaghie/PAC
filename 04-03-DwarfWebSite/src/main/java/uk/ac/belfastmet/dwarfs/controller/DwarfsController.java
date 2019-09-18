@@ -14,13 +14,13 @@ public class DwarfsController {
 		return "index";
 	}
 	
-	@GetMapping()
+	@GetMapping("/disney")
 	public String disneyPage() {
 		
 		return "disney";
 	}
 	
-	@GetMapping()
+	@GetMapping("/tolkien")
 	public String tolkienPage() {
 		
 		return "tolkien";

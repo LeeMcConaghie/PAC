@@ -1,6 +1,10 @@
 package uk.ac.belfastmet.dwarfs.service;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Service;
+
+import uk.ac.belfastmet.dwarfs.domain.Dwarf;
 
 @Service
 public class DwarfService {
@@ -8,7 +12,7 @@ public class DwarfService {
 	private ArrayList<Dwarf> disneyDwarfs;
 	private ArrayList<Dwarf> tolkienDwarfs;
 	
-	public ArrayList>Dwarf> getDisneyDwarfs() {
+	public ArrayList<Dwarf> getDisneyDwarfs() {
 		
 		this.disneyDwarfs = new ArrayList<Dwarf>();
 		
@@ -22,27 +26,15 @@ public class DwarfService {
 		this.disneyDwarfs.add(new Dwarf("Sneezy", "Disney", "Sneezy.png"));
 																
 		return this.disneyDwarfs;
+	}
 		
-		public ArrayList>Dwarf> getTolkienDwarfs() {
+		public ArrayList<Dwarf> getTolkienDwarfs() {
 			
 			this.tolkienDwarfs = new ArrayList<Dwarf>();
 			
-		/*add tolkien dwarfs here!	
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-			*/
-			
-			
-			
-			
+		// add tolkien dwarfs here!	
+
+			return this.tolkienDwarfs;
 			
 			
 	}
