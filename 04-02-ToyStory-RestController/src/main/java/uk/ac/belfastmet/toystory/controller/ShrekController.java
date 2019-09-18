@@ -10,7 +10,7 @@ public class ShrekController {
 	
 	@GetMapping("")
 	public String home() {
-		return "Characters in the movie Shrek";
+		return "Index";
 	}
 	
 	@GetMapping("/shrek")
