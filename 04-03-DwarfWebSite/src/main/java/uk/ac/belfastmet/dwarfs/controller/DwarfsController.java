@@ -19,14 +19,20 @@ public class DwarfsController {
 	
 	@GetMapping("/disney")
 	public String disneyPage(Model model) {
+		
+		
 		DwarfService dwarfService = new DwarfService();
 		model.addAttribute("pageTitle", "Disney Dwarfs");
-		model.addAttribute("numberOfDwarfs", "7");
+		model.addAttribute("dwarfs", dwarfService.getDisneyDwarfs());
 		return "disney";
 	}
 	
 	@GetMapping("/tolkien")
 	public String tolkienPage(Model model) {
+		
+		DwarfService dwarfService = new DwarfService();
+		model.addAttribute("pageTitle", "Tolkien Dwarfs");
+		model.addAttribute("dwarfs", dwarfService.getTolkienDwarfs());
 		
 		return "tolkien";
 	}
