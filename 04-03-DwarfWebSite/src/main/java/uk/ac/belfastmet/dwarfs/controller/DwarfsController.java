@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import uk.ac.belfastmet.dwarfs.service.DwarfService;
 
@@ -11,13 +12,13 @@ import uk.ac.belfastmet.dwarfs.service.DwarfService;
 @RequestMapping
 public class DwarfsController {
 	
-	@GetMapping()
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String homePage() {
 		
 		return "index";
 	}
 	
-	@GetMapping("/disney")
+	@RequestMapping(value = "/disney", method = RequestMethod.GET)
 	public String disneyPage(Model model) {
 		
 		
@@ -27,7 +28,7 @@ public class DwarfsController {
 		return "disney";
 	}
 	
-	@GetMapping("/tolkien")
+	@RequestMapping(value = "/tolkien", method = RequestMethod.GET)
 	public String tolkienPage(Model model) {
 		
 		DwarfService dwarfService = new DwarfService();
